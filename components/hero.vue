@@ -10,13 +10,6 @@
     </div>
 </template>
 
-<script>
-export default {
-    
-}
-</script>
-
-
 <style>
 .hero {
     height:500px;
@@ -29,3 +22,4 @@ export default {
     align-items:center;
 }
 </style>
+

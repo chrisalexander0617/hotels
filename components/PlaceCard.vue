@@ -1,9 +1,9 @@
 <template>
     <div>
-        <nuxt-link to="/">
+        <nuxt-link :to="{ path:'hotels/' + destinationId }">
             <div class="card p-3 shadow-none">
                 <h4>{{ placeTitle }}</h4>
-                <p>{{ destinationID }}</p>
+                <p>{{ destinationId }}</p>
             </div>
         </nuxt-link>
     </div>
@@ -16,7 +16,7 @@ export default {
             type:String, 
             required:true
         },
-        destinationID: {
+        destinationId: {
             type:String,
             required:true
         }
