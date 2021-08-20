@@ -19,13 +19,16 @@
         </div>
         <div class="col-lg-12 px-0">
           <button v-if="city.length"  @click="getPlaces()" class="mt-4">Search</button>
-          <button   @click="viewState()" class="mt-4">Search</button>
+          <button   @click="viewState()" class="mt-4">View State</button>
         </div>
       </div>
       <div v-if="places" class="container">
         <div class="row">
-          <div v-for="(city, i) in places.suggestions[0].entities" :key="i" class="col-12 my-5">
-            <div v-html="city.name"></div>
+        <div class="col-lg-12 mt-4">
+          <h2>Select a region</h2>
+        </div>
+          <div v-for="(city, i) in places.suggestions[0].entities" :key="i" class="col-lg-3">
+            <PlaceCard :placeTitle="city.name" :destinationID="destinationID" />
           </div>
         </div>
       </div>

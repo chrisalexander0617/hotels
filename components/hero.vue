@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h1 class="display-3 text-white font-weight-light">Find your next Michigan Get-a-Way</h1>
+                    <h1 class="display-3 text-white font-weight-bold">Hotels</h1>
                 </div>
             </div>
         </div>
