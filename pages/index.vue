@@ -18,14 +18,14 @@
           </div>
         </div>
         <div class="col-lg-12 px-0">
-          <button button @click="getPlaces()" class="mt-4">Search</button>
+          <button v-if="city.length"  @click="getPlaces()" class="mt-4">Search</button>
+          <button   @click="viewState()" class="mt-4">Search</button>
         </div>
       </div>
-      <div class="container">
+      <div v-if="places" class="container">
         <div class="row">
-          <div class="col-12 my-5">
-            <h2>Places</h2>
-            <pre>{{places}}</pre>
+          <div v-for="(city, i) in places.suggestions[0].entities" :key="i" class="col-12 my-5">
+            <div v-html="city.name"></div>
           </div>
         </div>
       </div>
@@ -47,6 +47,9 @@ export default {
     searchHotels(){
       console.log("Searching Hotels")
       console.log(this.city, this.checkInDate, this.checkOutDate)
+    },
+    viewState(){
+      console.log(this.$store.state.places)
     },
     async getPlaces(){
 
