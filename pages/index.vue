@@ -111,6 +111,7 @@ export default {
 body {
   background-color:rgb(252, 252, 252);
 }
+
 .hotel-search-form {
   padding:3rem;
   background-color:white;
@@ -118,17 +119,24 @@ body {
   max-width:100%;
   margin:0 auto;
   margin-top:-100px;
+  box-shadow: 0 0 63px rgba(14, 105, 158, 0.2)  ; 
+	-webkit-box-shadow: 0 0 63px rgba(14, 105, 158, 0.2)  ; 
+	-moz-box-shadow: 0 0 63px rgba(14, 105, 158, 0.2)  ; 
 }
 
 .hotel-search-form input.form-control{
   border-radius:0px;
+  padding:1rem 2rem;
+  border:none;
+  background-color:#f4f4f4;
 }
 
 button {
-  background-color:rgb(102, 102, 255);
+  background-color:#008080;
   border:none;
   padding:1rem 3rem;
   color:white;
+  border-radius:0px;
 }
 
 
