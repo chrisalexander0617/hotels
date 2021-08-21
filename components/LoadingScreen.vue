@@ -16,7 +16,7 @@
 .loader-screen {
     height:100vh;
     width:100vw;
-    background-color:#005370;
+    background-color:#e71b71;
     position:absolute;
     top:0;
     left:0;

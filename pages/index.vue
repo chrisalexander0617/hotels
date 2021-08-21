@@ -5,8 +5,8 @@
     <div class="hotel-search-form" action="">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12 px-0">
-            <h2>Find your hotel</h2>
+          <div class="col-lg-12 px-0 text-center">
+            <h2 class="font-weight-bold">Where you wanna go?</h2>
           </div>
           <div class="col-lg-4 px-2"> 
             <input v-model="city" class="form-control my-3" type="text" placeholder="Enter city">
@@ -25,7 +25,7 @@
       </div>
       <div class="container">
         <div v-if="isLoading" class="row">
-          <div class="col-12 text-center my-5">
+          <div class="col-12 my-5">
             <p>Searching for hotels</p>
             <div class="spinner">
               <div class="rect1"></div>
@@ -40,7 +40,7 @@
           <div class="col-lg-12 mt-4">
             <h2>Select a region</h2>
           </div>
-          <div v-for="(city, i) in places.suggestions[0].entities" :key="i" class="col-lg-3 my-2">
+          <div v-for="(city, i) in places.suggestions[0].entities" :key="i" class="col-lg-4 my-2 text-left">
             <PlaceCard :placeTitle="city.name" :destinationId="city.destinationId" />
           </div>
         </div>
@@ -119,9 +119,10 @@ body {
   max-width:100%;
   margin:0 auto;
   margin-top:-100px;
-  box-shadow: 0 0 63px rgba(14, 105, 158, 0.2)  ; 
-	-webkit-box-shadow: 0 0 63px rgba(14, 105, 158, 0.2)  ; 
-	-moz-box-shadow: 0 0 63px rgba(14, 105, 158, 0.2)  ; 
+  box-shadow: 0 0 63px rgba(14, 105, 158, 0.2); 
+	-webkit-box-shadow: 0 0 63px rgba(14, 105, 158, 0.2); 
+	-moz-box-shadow: 0 0 63px rgba(14, 105, 158, 0.2); 
+  border-radius:15px;
 }
 
 .hotel-search-form input.form-control{
@@ -132,11 +133,11 @@ body {
 }
 
 button {
-  background-color:#008080;
+  background-color:#e71b71;
   border:none;
   padding:1rem 3rem;
   color:white;
-  border-radius:0px;
+  border-radius:50px;
 }
 
 
