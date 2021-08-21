@@ -1,13 +1,13 @@
 <template>
     <div>
         <h1>Results</h1>
-        <pre>{{ }}</pre>
+        <pre>{{ hotels }}</pre>
     </div>
 </template>
 
 <script>
 export default {
-     asyncData({params}){
+    async asyncData({params, $axios}){
         const options = {
             method: 'GET',
             url: 'https://hotels4.p.rapidapi.com/properties/list',
@@ -27,6 +27,10 @@ export default {
                 'x-rapidapi-key': '1774d6f943msh6412fdb3646c73ep16bf57jsn247532849e44'
             }
         };
+       var hotels  = await $axios.$request(options)
+       return {
+           hotels:hotels
+       }
     }
 }
 </script>

@@ -4,7 +4,8 @@ export const state = () => ({
     city:false,
     checkInDate:false,
     checkOutDate:false,
-    isLoading:''
+    isLoading:'',
+    bigLoadingScreen:false
 })
 
 export const mutations = {
@@ -19,6 +20,12 @@ export const mutations = {
     },
     CLEAR_PLACES(state){
         state.places = false
+    },
+    SHOW_BIG_LOADING_SCREEN(state){
+        state.bigLoadingScreen = true
+    },
+    HIDE_BIG_LOADING_SCREEN(state){
+        state.bigLoadingScreen = false
     }
 }
 
@@ -34,6 +41,12 @@ export const actions = {
     },
     removeLoadingScreen(context){
         context.commit("REMOVE_LOADING_STATUS")
+    },
+    showBigLoadingScreen(context){
+        context.commit("SHOW_BIG_LOADING_SCREEN")
+    },
+    hideBigLoadingScreen(context){
+        context.commit("HIDE_BIG_LOADING_SCREEN")
     }
 }
 
@@ -43,5 +56,8 @@ export const getters = {
     },
     isLoading(state){
         return state.isLoading
+    },
+    bigLoadingScreen(state){
+        return state.bigLoadingScreen
     }
 }

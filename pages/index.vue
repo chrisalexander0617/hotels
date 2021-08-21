@@ -1,5 +1,6 @@
 <template>
   <div>
+  <LoadingScreen v-if="loadingHotels" />
     <Hero />
     <div class="hotel-search-form" action="">
       <div class="container">
@@ -24,7 +25,8 @@
       </div>
       <div class="container">
         <div v-if="isLoading" class="row">
-          <div class="col-12 my-5">
+          <div class="col-12 text-center my-5">
+            <p>Searching for hotels</p>
             <div class="spinner">
               <div class="rect1"></div>
               <div class="rect2"></div>
@@ -48,8 +50,10 @@
 </template>
 
 <script>
-import Hero from '../components/hero.vue'
+import Hero from '../components/hero.vue';
+import LoadingScreen from '../components/LoadingScreen.vue'
 export default {
+  components:{Hero, LoadingScreen},
   data(){
     return {
       city:'',
@@ -94,7 +98,10 @@ export default {
     },
     isLoading(){
       return this.$store.getters.isLoading
-    }
+    },
+     loadingHotels(){
+       return this.$store.getters.bigLoadingScreen
+     }
   }
 }
 </script>
