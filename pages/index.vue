@@ -6,7 +6,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 px-0 text-center">
-            <h2 class="font-weight-bold">Where you wanna go?</h2>
+            <h2 class="font-weight-bold text-dark">Where you wanna go?</h2>
           </div>
           <div class="col-lg-4 px-2"> 
             <input v-model="city" class="form-control my-3" type="text" placeholder="Enter city">
@@ -116,7 +116,7 @@ body {
   padding:3rem;
   background-color:white;
   width:1200px;
-  max-width:100%;
+  max-width:80%;
   margin:0 auto;
   margin-top:-100px;
   box-shadow: 0 0 63px rgba(14, 105, 158, 0.2); 

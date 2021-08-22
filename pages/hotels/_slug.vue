@@ -3,20 +3,24 @@
         <div class="row">
             <div class="col-lg-12 my-5">
                 <h1>{{ hotels.header }}</h1>
-             <!-- <pre>{{ hotels.searchResults.results }}</pre> -->
+              <pre>{{ hotels.searchResults.results }}</pre>
             </div>
         </div>
         <div class="row">
-            <div v-for="(hotel, i) in hotels.searchResults.results" :key="hotel.id" class="col-lg-12 card my-3 p-3">
-                <h2>{{ hotel.name }}</h2>
-                <p>{{ hotel.address.streetAddress }}</p>
-                <h4>Rating: {{ hotel.starRating }}</h4>
+            <div v-for="(hotel, i) in hotels.searchResults.results" :key="hotel.id" class="col-lg-3  my-3 p-3">
+            <div class="card bg-light p-0 shadow-none">
+                <img class="card-img-top img-fluid mb-4"  :src="hotel.optimizedThumbUrls.srpDesktop" :alt="hotel.name" />
+                <h2 class="font-weight-light text-dark h4">{{ hotel.name }}</h2>
+                <p class="text-muted">{{ hotel.address.streetAddress }}</p>
+                <p  v-if="hotel.guestReviews.badge === 'good'" class="text-muted">People love it here!</p>
                 <!--<h4>Rating: {{ hotel.guestReviews.rating }}</h4>
                 <h4>Total Reviews: {{ hotel.guestReviews.total }}</h4>
                 <h4>Overall Rating: {{ hotel.guestReviews.badgeText }}</h4>-->
-                <div v-for="(landmark, i) in hotel.landmarks" :key="i">
-                    <p>{{landmark.distance}} miles from {{landmark.label}}</p>
+                <div class=""  v-for="(landmark, i) in hotel.landmarks" :key="i">
+                    <p class="text-muted">{{landmark.distance}} miles from {{landmark.label}}</p>
                 </div>
+            </div>
+              
             </div>
         </div>
     </div>
