@@ -36,11 +36,11 @@
             </div>
           </div>
         </div>
-        <div v-if="places" class="row">
+        <div v-if="places" class="row mt-5">
           <div class="col-lg-12 mt-4">
-            <h2>Select a region</h2>
+            <h2 class="mb-5">Select a region</h2>
           </div>
-          <div v-for="(city, i) in places.suggestions[0].entities" :key="i" class="col-lg-4 my-2 text-left">
+          <div v-for="(city, i) in places.suggestions[0].entities" :key="i" class="col-lg-3  text-left">
             <PlaceCard :placeTitle="city.name" :destinationId="city.destinationId" />
           </div>
         </div>
@@ -53,7 +53,7 @@
 import Hero from '../components/hero.vue';
 import LoadingScreen from '../components/LoadingScreen.vue'
 export default {
-  components:{Hero, LoadingScreen},
+  components:{ Hero, LoadingScreen },
   data(){
     return {
       city:'',
@@ -108,8 +108,24 @@ export default {
 
 
 <style>
+
+.brand-color {
+    color:#0037FF;
+}
+
 body {
   background-color:rgb(252, 252, 252);
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+.font-weight-bold {
+  font-weight:700;
+}
+
+
+.card-img-top {
+  border-radius:10px;
 }
 
 .hotel-search-form {
@@ -133,7 +149,7 @@ body {
 }
 
 button {
-  background-color:#e71b71;
+  background-color:#0037FF;
   border:none;
   padding:1rem 3rem;
   color:white;
@@ -149,7 +165,7 @@ button {
   font-size: 10px;
 }
 .spinner > div {
-  background-color: rgb(0, 0, 0);
+  background-color:#0037FF;
   height: 100%;
   width: 6px;
   display: inline-block;

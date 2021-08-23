@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Flight Schedule',
+    title: 'Hotels',
     htmlAttrs: {
       lang: 'en'
     },
@@ -12,7 +12,16 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      
+      {
+        rel:"preconnect", href:"https://fonts.googleapis.com"
+      },
+      {
+        rel:"preconnect", href:"https://fonts.gstatic.com"
+      },
+      { 
+        rel:"stylesheet", href:"https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" 
+      },
+    
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css' }

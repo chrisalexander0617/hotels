@@ -1,9 +1,9 @@
 <template>
     <client-only>
-        <button class="text-left" style="background:none;" @click="loadHotelsForRegion">
+        <button class="text-left shadow w-100 my-3" style="background:none;" @click="loadHotelsForRegion">
             <nuxt-link :to="{ path:'hotels/' + destinationId }">
-                <div class="card p-3 text-left shadow-none" style="background:none;" >
-                    <h5 class="text-dark text-left">{{ placeTitle }}</h5>
+                <div class="card  text-left shadow-none" style="background:none;" >
+                    <h5 class="text-dark text-left h6">{{ placeTitle }}</h5>
                 </div>
             </nuxt-link>
         </button>
